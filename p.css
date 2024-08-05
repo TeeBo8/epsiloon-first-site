@@ -1,0 +1,157 @@
+/*Définition des polices personnalisées avec FontSquirrel*/
+@font-face {
+    font-family: 'aganlight';
+    src: url('agane_45_light-webfont.woff2') format('woff2'),
+         url('agane_45_light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'agan_sregular';
+    src: url('agane_55_roman_sign-webfont.woff2') format('woff2'),
+         url('agane_55_roman_sign-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'aganregular';
+    src: url('agane_55_roman-webfont.woff2') format('woff2'),
+         url('agane_55_roman-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'agan_sbold';
+    src: url('agane_65_bold_sign-webfont.woff2') format('woff2'),
+         url('agane_65_bold_sign-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'aganbold';
+    src: url('agane_65_bold-webfont.woff2') format('woff2'),
+         url('agane_65_bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'agan_sextra_bold';
+    src: url('agane_75_extra_bold_sign-webfont.woff2') format('woff2'),
+         url('agane_75_extra_bold_sign-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'aganextra_bold';
+    src: url('agane_75_extra_bold-webfont.woff2') format('woff2'),
+         url('agane_75_extra_bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/*Eléments principaux de la page*/
+
+body
+{
+    background: url('spaceback.jpg');
+    font-family: 'aganregular', Arial, sans-serif;
+    color: #FFFFFF;
+}
+#bloc_page
+{
+    width: 1800px; /*largeur de la page de 1800 pixels*/
+    margin : auto;
+}
+
+/*Header*/
+header
+{
+    display: flex;
+    align-items: flex-end;
+    height: 850px;
+    width: 1600px;
+}
+#titre_principal
+{
+    display: flex;
+    flex-direction: column;
+    color:  #FFFFFF;
+    font-size: 3.5em;
+    font-family: 'aganextra_bold';
+}
+#logo
+{
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+}
+#logo img
+{
+    width: 200px;
+    height: 100px;
+}
+header h1
+{
+    font-family: 'aganextra_bold', serif;
+    font-size: 2em;
+    color:  #FFFFFF;
+    margin: 0 0 0 10px;
+}
+header h2
+{
+    font-family: 'agan_sextra_bold', serif;
+    font-size: 0.9em;
+    margin-top: 5px;
+    text-align: justify;
+}
+
+aside p
+{
+    padding: 20px;      /*Marge intérieur de 20px*/
+    color:  #FFFFFF;
+    margin: auto;
+}
+
+/*navigation*/
+
+nav ol 
+{
+    list-style-type: none;
+    display: column;
+}
+nav li
+{
+    margin-right: 15px;
+}
+nav a
+{
+    font-size: 1.3em;
+    color: #FFFFFF;
+    text-decoration:  none;
+}
+
+nav a:hover
+{
+    color: #760001;
+    border-bottom:  3px solid #760001;
+}
+p a
+{
+    color: yellow;
+}
+
+
+/*bannière*/
+
+#banniere_fusee
+{
+    background: url('OIV.webp');
+    width: 1800px;
+}
