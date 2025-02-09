@@ -3,28 +3,39 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Découvrez l'espace, le nouveau Far West avec Epsiloon. Explorez le tourisme spatial, les stations orbitales et les mégaconstellations de satellites.">
     <title>Epsiloon - L'espace, le nouveau Far West</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Préchargement des images critiques -->
+    <link rel="preload" as="image" href="spaceback.jpg">
+    <link rel="preload" as="image" href="epsiloon_logo.jpg">
 </head>
 <body>
+    <!-- Skip to main content pour l'accessibilité -->
+    <a href="#main-content" class="sr-only">Passer au contenu principal</a>
+
     <header class="main-header">
-        <nav class="navbar">
+        <nav class="navbar" role="navigation" aria-label="Navigation principale">
             <div class="logo-container">
-                <img src="epsiloon_logo.jpg" alt="Logo Epsiloon" class="logo">
+                <img src="epsiloon_logo.jpg" alt="Logo Epsiloon" class="logo" width="150" height="50">
             </div>
-            <button class="nav-toggle">
+            <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
                 <span class="hamburger"></span>
             </button>
             <ul class="nav-menu">
-                <li><a href="#exploits">Les Exploits</a></li>
-                <li><a href="#orbite">Orbite Basse</a></li>
-                <li><a href="#megaconstellations">Mégaconstellations</a></li>
-                <li><a href="#technologies">Technologies</a></li>
-                <li><a href="#nouveau-monde">Nouveau Monde</a></li>
-                <li class="cta-button"><a href="#contact">S'abonner</a></li>
-                <li><button id="theme-toggle" class="theme-toggle"><i class="fas fa-moon"></i></button></li>
+                <li><a href="#exploits" aria-label="Section Les Exploits">Les Exploits</a></li>
+                <li><a href="#orbite" aria-label="Section Orbite Basse">Orbite Basse</a></li>
+                <li><a href="#megaconstellations" aria-label="Section Mégaconstellations">Mégaconstellations</a></li>
+                <li><a href="#technologies" aria-label="Section Technologies">Technologies</a></li>
+                <li><a href="#nouveau-monde" aria-label="Section Nouveau Monde">Nouveau Monde</a></li>
+                <li class="cta-button"><a href="#contact" aria-label="S'abonner">S'abonner</a></li>
+                <li>
+                    <button id="theme-toggle" class="theme-toggle" aria-label="Basculer le thème sombre/clair">
+                        <i class="fas fa-moon" aria-hidden="true"></i>
+                    </button>
+                </li>
             </ul>
         </nav>
 
@@ -37,103 +48,129 @@
                     révolutionnaires, et l'avènement des mégaconstellations de satellites.
                     Découvrez comment cette nouvelle ère spatiale transforme notre monde.
                 </p>
-                <a href="#lire-plus" class="cta-primary">Lire l'article</a>
+                <a href="#lire-plus" class="cta-primary" aria-label="Lire l'article complet">Lire l'article</a>
             </div>
         </div>
     </header>
 
-    <main>
-        <!-- Section Articles -->
-        <section class="articles-grid" id="exploits">
+    <main id="main-content">
+        <section class="articles-grid" id="exploits" aria-label="Articles principaux">
             <article class="article-card">
                 <div class="article-image">
-                    <img src="tourisme-spatial.jpg" alt="Tourisme Spatial">
+                    <img src="bezos.jpg" alt="Jeff Bezos lors d'un vol spatial" width="400" height="300" loading="lazy">
                 </div>
                 <div class="article-content">
                     <h3>Le Tourisme Spatial</h3>
-                    <p>Découvrez comment les milliardaires transforment l'accès à l'espace...</p>
-                    <a href="#" class="read-more">Lire plus <i class="fas fa-arrow-right"></i></a>
+                    <p>Découvrez comment les milliardaires transforment l'accès à l'espace et démocratisent les voyages orbitaux pour le grand public.</p>
+                    <a href="#" class="read-more" aria-label="Lire plus sur le tourisme spatial">
+                        Lire plus <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                    </a>
                 </div>
             </article>
-            <!-- Ajout de nouveaux articles -->
+
             <article class="article-card">
                 <div class="article-image">
-                    <img src="satellite.jpg" alt="Satellites">
+                    <img src="stationspatial.jpg" alt="Station spatiale en orbite" width="400" height="300" loading="lazy">
+                </div>
+                <div class="article-content">
+                    <h3>Les Stations Orbitales</h3>
+                    <p>Les nouvelles stations spatiales commerciales promettent de révolutionner la recherche en microgravité.</p>
+                    <a href="#" class="read-more" aria-label="Lire plus sur les stations orbitales">
+                        Lire plus <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </article>
+
+            <article class="article-card">
+                <div class="article-image">
+                    <img src="OIV.webp" alt="Constellation de satellites en orbite" width="400" height="300" loading="lazy">
                 </div>
                 <div class="article-content">
                     <h3>Les Mégaconstellations</h3>
-                    <p>Comment les satellites changent notre façon de communiquer...</p>
-                    <a href="#" class="read-more">Lire plus <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </article>
-            <article class="article-card">
-                <div class="article-image">
-                    <img src="technologie.jpg" alt="Technologies Spatiales">
-                </div>
-                <div class="article-content">
-                    <h3>Technologies Spatiales</h3>
-                    <p>Les innovations qui repoussent les limites de l'exploration...</p>
-                    <a href="#" class="read-more">Lire plus <i class="fas fa-arrow-right"></i></a>
+                    <p>Comment les constellations de satellites transforment notre accès à Internet et notre vision du ciel nocturne.</p>
+                    <a href="#" class="read-more" aria-label="Lire plus sur les mégaconstellations">
+                        Lire plus <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                    </a>
                 </div>
             </article>
         </section>
 
-        <!-- Section Interactive -->
-        <section class="interactive-section" id="orbite">
+        <section class="interactive-section" id="orbite" aria-label="Histoire de la conquête spatiale">
             <div class="timeline">
                 <h2>Histoire de la Conquête Spatiale</h2>
                 <div class="timeline-content">
-                    <div class="timeline-item">
+                    <div class="timeline-item" data-year="1957">
                         <h3>1957 - Spoutnik 1</h3>
-                        <p>Le premier satellite artificiel lancé par l'URSS.</p>
+                        <p>Le premier satellite artificiel lancé par l'URSS ouvre l'ère spatiale.</p>
                     </div>
-                    <div class="timeline-item">
+                    <div class="timeline-item" data-year="1969">
                         <h3>1969 - Apollo 11</h3>
-                        <p>Premier alunissage réussi par les États-Unis.</p>
+                        <p>Neil Armstrong devient le premier homme à marcher sur la Lune.</p>
                     </div>
-                    <div class="timeline-item">
+                    <div class="timeline-item" data-year="2021">
                         <h3>2021 - Tourisme Spatial</h3>
-                        <p>Les premiers vols spatiaux privés avec SpaceX.</p>
+                        <p>SpaceX réalise le premier vol orbital entièrement privé avec Inspiration4.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Section Contact -->
-        <section class="contact-section" id="contact">
+        <section class="contact-section" id="contact" aria-label="Formulaire de contact">
             <h2>Abonnez-vous à Epsiloon</h2>
-            <form id="contact-form">
-                <label for="name">Nom :</label>
-                <input type="text" id="name" name="name" required>
+            <form id="contact-form" class="contact-form" novalidate>
+                <div class="form-group">
+                    <label for="name">Nom</label>
+                    <input type="text" id="name" name="name" required 
+                           aria-required="true" aria-describedby="name-error">
+                </div>
                 
-                <label for="email">Email :</label>
-                <input type="email" id="email" name="email" required>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required 
+                           aria-required="true" aria-describedby="email-error">
+                </div>
                 
-                <label for="message">Message :</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required 
+                              aria-required="true" aria-describedby="message-error"></textarea>
+                </div>
                 
-                <button type="submit">Envoyer</button>
+                <button type="submit" class="submit-btn">Envoyer</button>
             </form>
         </section>
     </main>
 
-    <footer class="main-footer">
+    <footer class="main-footer" role="contentinfo">
         <div class="footer-content">
             <div class="footer-section">
                 <h4>À propos d'Epsiloon</h4>
-                <p>Epsiloon est un magazine dédié à l'exploration spatiale et aux technologies de pointe.</p>
+                <p>Epsiloon est un magazine de référence dédié à l'exploration spatiale et aux technologies de pointe.</p>
             </div>
             <div class="footer-section">
                 <h4>Suivez-nous</h4>
                 <div class="social-links">
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Facebook">
+                        <i class="fab fa-facebook" aria-hidden="true"></i>
+                    </a>
+                    <a href="#" aria-label="Twitter">
+                        <i class="fab fa-twitter" aria-hidden="true"></i>
+                    </a>
+                    <a href="#" aria-label="Instagram">
+                        <i class="fab fa-instagram" aria-hidden="true"></i>
+                    </a>
                 </div>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <address>
+                    <p>Email: contact@epsiloon.com</p>
+                    <p>Téléphone: +33 1 23 45 67 89</p>
+                </address>
             </div>
         </div>
     </footer>
 
-    <script src="main.js"></script>
+    <script src="main.js" defer></script>
 </body>
 </html>
